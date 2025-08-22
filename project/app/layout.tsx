@@ -5,7 +5,7 @@ import { Inter, Sora, JetBrains_Mono } from 'next/font/google';
 import Navigation from '@/components/Navigation';
 import ScrollProgress from '@/components/ScrollProgress';
 import CustomCursor from '@/components/CustomCursor';
-
+import { Analytics } from '@vercel/analytics/react'
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-sans',
@@ -42,7 +42,7 @@ export default function RootLayout({
           <Navigation />
           <CustomCursor />
           <main>{children}</main>
-       
+          <Analytics />
       </body>
     </html>
   );
